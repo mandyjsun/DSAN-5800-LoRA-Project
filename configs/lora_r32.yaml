@@ -1,0 +1,17 @@
+model: mistralai/Mistral-7B-Instruct-v0.2
+rank: 32
+lora_alpha: 32
+lora_dropout: 0.05
+use_qlora: true
+bnb_4bit_nf4: true
+bnb_double_quant: true
+batch_size: 1
+grad_accum: 32
+lr: 0.0001
+epochs: 2
+warmup_ratio: 0.03
+max_seq_len: 1024
+bf16: true
+gradient_checkpointing: true
+
+

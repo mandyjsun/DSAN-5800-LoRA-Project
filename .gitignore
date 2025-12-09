@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data and artifacts
+data/*
+artifacts/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env and tooling (venv intentionally excluded per user)
+.env
+.vscode/
+.idea/
+
+
+wandb/*

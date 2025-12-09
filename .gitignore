@@ -8,6 +8,7 @@ __pycache__/
 # Data and artifacts
 data/*
 artifacts/
+artifacts.zip
 
 # OS
 .DS_Store

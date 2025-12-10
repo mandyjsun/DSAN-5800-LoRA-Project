@@ -1,6 +1,6 @@
-Test cases where LoRA r=8 PASSED but baseline FAILED (129 cases):
+## Test cases where LoRA r=8 PASSED but baseline FAILED (129 cases):
 
---- Example 1 ---
+**--- Example 1 ---**
 
 Task ID: 12
 Instruction: Write a function to sort a given matrix in ascending order according to the sum of its rows.
@@ -34,7 +34,7 @@ Baseline error: Test failed: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]
 
 --------------------------------------------------------------------------------
 
---- Example 2 ---
+**--- Example 2 ---**
 
 Task ID: 18
 Instruction: Write a function to remove characters from the first string which are present in the second string.
@@ -60,7 +60,7 @@ Baseline error: Test failed: assert remove_dirty_chars("probasscurve", "pros") =
 
 --------------------------------------------------------------------------------
 
---- Example 3 ---
+**--- Example 3 ---**
 
 Task ID: 19
 Instruction: Write a function to find whether a given array of integers contains any duplicate element.
@@ -91,7 +91,7 @@ Baseline error: Test failed: assert test_duplicate(([1,2,3,4,5]))==False -> Name
 
 --------------------------------------------------------------------------------
 
---- Example 4 ---
+**--- Example 4 ---**
 
 Task ID: 22
 Instruction: Write a function to find the first duplicate element in a given array of integers.
@@ -129,7 +129,7 @@ Baseline error: Test failed: assert find_first_duplicate([1, 2, 3, 4])==-1 -> Va
 
 --------------------------------------------------------------------------------
 
---- Example 5 ---
+**--- Example 5 ---**
 
 Task ID: 23
 Instruction: Write a python function to find the maximum sum of elements of list in a list of lists.
@@ -167,7 +167,7 @@ Baseline error: Test failed: assert maximum_Sum([[1,2,3],[4,5,6],[10,11,12],[7,8
 
 --------------------------------------------------------------------------------
 
---- Example 6 ---
+**--- Example 6 ---**
 
 Task ID: 28
 Instruction: Write a python function to find binomial co-efficient.
@@ -204,7 +204,7 @@ Baseline error: Test failed: assert binomial_Coeff(5,2) == 10 -> NameError: name
 
 --------------------------------------------------------------------------------
 
---- Example 7 ---
+**--- Example 7 ---**
 
 Task ID: 41
 Instruction: Write a function to filter even numbers using lambda function.
@@ -231,7 +231,7 @@ Baseline error: Test failed: assert filter_evennumbers([1, 2, 3, 4, 5, 6, 7, 8, 
 
 --------------------------------------------------------------------------------
 
---- Example 8 ---
+**--- Example 8 ---**
 
 Task ID: 46
 Instruction: Write a python function to determine whether all the numbers are different from each other are not.
@@ -256,7 +256,7 @@ Baseline error: Test failed: assert test_distinct([1,5,7,9]) == True -> NameErro
 
 --------------------------------------------------------------------------------
 
---- Example 9 ---
+**--- Example 9 ---**
 
 Task ID: 49
 Instruction: Write a function to extract every first or specified element from a given two-dimensional list.
@@ -287,7 +287,7 @@ Baseline error: Test failed: assert specified_element([[1, 2, 3, 2], [4, 5, 6, 2
 
 --------------------------------------------------------------------------------
 
---- Example 10 --
+**--- Example 10 --**
 -
 Task ID: 56
 Instruction: Write a python function to check if a given number is one less than twice its reverse.
@@ -319,7 +319,7 @@ Baseline error: Test failed: assert check(70) == False -> NameError: name 'check
 
 --------------------------------------------------------------------------------
 
---- Example 11 --
+**--- Example 11 --**
 -
 Task ID: 58
 Instruction: Write a python function to check whether the given two integers have opposite sign or not.
@@ -348,7 +348,7 @@ Baseline error: Test failed: assert opposite_Signs(1,-2) == True -> NameError: n
 
 --------------------------------------------------------------------------------
 
---- Example 12 --
+**--- Example 12 --**
 -
 Task ID: 62
 Instruction: Write a python function to find smallest number in a list.
@@ -379,7 +379,7 @@ Baseline error: Test failed: assert smallest_num([10, 20, 1, 45, 99]) == 1 -> Na
 
 --------------------------------------------------------------------------------
 
---- Example 13 --
+**--- Example 13 --**
 -
 Task ID: 64
 Instruction: Write a function to sort a list of tuples using lambda.
@@ -408,7 +408,7 @@ Baseline error: Test failed: assert subject_marks([('English', 88), ('Science', 
 
 --------------------------------------------------------------------------------
 
---- Example 14 --
+**--- Example 14 --**
 -
 Task ID: 66
 Instruction: Write a python function to count positive numbers in a list.
@@ -437,7 +437,7 @@ Baseline error: Test failed: assert pos_count([1,-2,3,-4]) == 2 -> NameError: na
 
 --------------------------------------------------------------------------------
 
---- Example 15 --
+**--- Example 15 --**
 -
 Task ID: 68
 Instruction: Write a python function to check whether the given array is monotonic or not.

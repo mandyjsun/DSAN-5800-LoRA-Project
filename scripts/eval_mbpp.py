@@ -235,6 +235,7 @@ def evaluate_mbpp(
     summary = {
         "total": len(tasks),
         "syntax_ok": num_syntax_ok,
+        
         "syntax_rate": num_syntax_ok / max(1, len(tasks)),
         "pass": num_pass,
         "pass_rate": num_pass / max(1, len(tasks)),

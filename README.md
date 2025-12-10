@@ -44,7 +44,7 @@ Notes:
 - configs/
   - lora_r8.yaml, lora_r32.yaml: pre-tuned configs for 12GB VRAM
 - notebooks/
-  - demo.ipynb: quick inference + sanity tests
+  - analysis.ipynb: quick inference + sanity tests
 
 Suggested folders (created automatically by some scripts, but safe to create):
 ```bash
@@ -102,7 +102,18 @@ python scripts/eval_mbpp.py \
   --model mistralai/Mistral-7B-Instruct-v0.2 \
   --lora-dir artifacts/checkpoints/mistral7b-code-r8 \
   --mbpp-file data/processed/mbpp_test.jsonl \
-  --out-file artifacts/metrics/mistral7b-code-r8-mbpp_results.json
+  --out-file artifacts/metrics/mistral7b-code-r8-mbpp_results.json \
+  --device-map auto \
+  --offload-folder .cache_offload
+```
+Notes:
+- `--device-map auto` enables Accelerate to place layers on GPU and offload the rest to CPU.
+- Set `--offload-folder` to any writable path for CPU offload (created if missing).
+- Add `--limit 10` for a quick sanity run.
+
+Example (PowerShell) used for the r8 adapter:
+```powershell
+python scripts/eval_mbpp.py --model mistralai/Mistral-7B-Instruct-v0.2 --lora-dir artifacts/checkpoints/mistral7b-code-r8 --mbpp-file data/processed/mbpp_test.jsonl --out-file artifacts/metrics/mistral7b-code-r8-mbpp_results.json --device-map auto --offload-folder .cache_offload
 ```
 Outputs include:
 - pass_rate (pass@1)

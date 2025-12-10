@@ -32,6 +32,23 @@ def write_jsonl(path: str, items: Iterable[Dict]) -> None:
             f.write(json.dumps(obj, ensure_ascii=False) + "\n")
 
 
+def extract_function_name_from_tests(tests: List[str]) -> Optional[str]:
+    """
+    Try to infer the primary function name from the provided MBPP tests.
+    Heuristic: find the first 'assert <funcName>(' occurrence and use that name.
+    """
+    if not tests:
+        return None
+    pattern = re.compile(r"""assert\s+([A-Za-z_]\w*)\s*\(""")
+    for t in tests:
+        if not isinstance(t, str):
+            continue
+        m = pattern.search(t)
+        if m:
+            return m.group(1)
+    return None
+
+
 def build_prompt(tokenizer: AutoTokenizer, instruction: str, user_input: str = "") -> str:
     messages = [
         {"role": "system", "content": "You are a Python coding assistant. Produce correct, clean, efficient Python."},
@@ -166,7 +183,19 @@ def evaluate_mbpp(
     for idx, ex in enumerate(tasks, start=1):
         instruction = ex.get("instruction", "")
         tests = ex.get("tests") or []
-        prompt = build_prompt(tokenizer, instruction)
+        # Augment instruction so the model uses the exact function name expected by tests
+        func_name = extract_function_name_from_tests(tests)
+        if func_name:
+            instruction_aug = (
+                f"{instruction}\n\n"
+                f"Important:\n"
+                f"- Define the function exactly with the name `{func_name}`.\n"
+                f"- Begin your answer with `def {func_name}(` and provide only valid Python code for the solution.\n"
+                f"- Do not include explanations, comments unrelated to functionality, or extra text."
+            )
+        else:
+            instruction_aug = instruction
+        prompt = build_prompt(tokenizer, instruction_aug)
         inputs = tokenizer(prompt, return_tensors="pt").to(device)
         with torch.no_grad():
             gen = model.generate(
@@ -225,7 +254,7 @@ def main() -> None:
     parser.add_argument("--lora-dir", type=str, default="")
     parser.add_argument("--mbpp-file", type=str, required=True)
     parser.add_argument("--out-file", type=str, required=True)
-    parser.add_argument("--max-new-tokens", type=int, default=768)
+    parser.add_argument("--max-new-tokens", type=int, default=1024)
     parser.add_argument("--temperature", type=float, default=0.2)
     parser.add_argument("--top-p", type=float, default=0.9)
     parser.add_argument("--no-4bit", action="store_true", help="Disable 4-bit quantized loading")

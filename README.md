@@ -1,6 +1,6 @@
 ## DSAN-5800 LoRA Project — Runbook (CUDA on RTX 4070 Super)
 
-End-to-end steps to run data prep, baseline, training, and evaluation locally on your 4070S. You manage your own virtual environment; activate it before running commands.
+End-to-end steps to run data prep, baseline, training, and evaluation locally on 4070S (12GB).
 
 ### Requirements
 - GPU: NVIDIA RTX 4070 Super (12GB)
@@ -123,5 +123,7 @@ Outputs include:
 Security note: evaluation executes test strings with exec; use in trusted environments only.
 
 ### Results
-See [analysis.md](./analysis.ipynb) 
+See [analysis.md](./analysis.ipynb) for aggregate metrics (syntax & pass rate)
+
+See [results_comparison.md](./results_comparison.md) for examples where LoRA correctly passes unit tests that the baseline model fails
 

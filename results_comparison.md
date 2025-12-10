@@ -1,5 +1,7 @@
 Test cases where LoRA r=8 PASSED but baseline FAILED (129 cases):
+
 --- Example 1 ---
+
 Task ID: 12
 Instruction: Write a function to sort a given matrix in ascending order according to the sum of its rows.
 
@@ -29,8 +31,11 @@ def sort_matrix_by_row_sum(matrix):
 ```
 
 Baseline error: Test failed: assert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]] -> NameError: name 'sort_matrix' is not defined
+
 --------------------------------------------------------------------------------
+
 --- Example 2 ---
+
 Task ID: 18
 Instruction: Write a function to remove characters from the first string which are present in the second string.
 
@@ -52,8 +57,11 @@ def remove_characters(string_one, string_two):
 ```
 
 Baseline error: Test failed: assert remove_dirty_chars("probasscurve", "pros") == 'bacuve' -> NameError: name 'remove_dirty_chars' is not defined
+
 --------------------------------------------------------------------------------
+
 --- Example 3 ---
+
 Task ID: 19
 Instruction: Write a function to find whether a given array of integers contains any duplicate element.
 
@@ -80,8 +88,11 @@ def find_duplicate(arr):
 ```
 
 Baseline error: Test failed: assert test_duplicate(([1,2,3,4,5]))==False -> NameError: name 'test_duplicate' is not defined
+
 --------------------------------------------------------------------------------
+
 --- Example 4 ---
+
 Task ID: 22
 Instruction: Write a function to find the first duplicate element in a given array of integers.
 
@@ -115,8 +126,11 @@ def find_first_duplicate(numbers):
 ```
 
 Baseline error: Test failed: assert find_first_duplicate([1, 2, 3, 4])==-1 -> ValueError: No duplicate elements found
+
 --------------------------------------------------------------------------------
+
 --- Example 5 ---
+
 Task ID: 23
 Instruction: Write a python function to find the maximum sum of elements of list in a list of lists.
 
@@ -150,8 +164,11 @@ def max_sum_list_of_lists(list_of_lists):
 ```
 
 Baseline error: Test failed: assert maximum_Sum([[1,2,3],[4,5,6],[10,11,12],[7,8,9]]) == 33 -> NameError: name 'maximum_Sum' is not defined
+
 --------------------------------------------------------------------------------
+
 --- Example 6 ---
+
 Task ID: 28
 Instruction: Write a python function to find binomial co-efficient.
 
@@ -184,8 +201,11 @@ def binomial_coefficient(n, k):
 ```
 
 Baseline error: Test failed: assert binomial_Coeff(5,2) == 10 -> NameError: name 'binomial_Coeff' is not defined
+
 --------------------------------------------------------------------------------
+
 --- Example 7 ---
+
 Task ID: 41
 Instruction: Write a function to filter even numbers using lambda function.
 
@@ -208,8 +228,11 @@ def filter_even_numbers(input_list):
 ```
 
 Baseline error: Test failed: assert filter_evennumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])==[2, 4, 6, 8, 10] -> NameError: name 'filter_evennumbers' is not defined
+
 --------------------------------------------------------------------------------
+
 --- Example 8 ---
+
 Task ID: 46
 Instruction: Write a python function to determine whether all the numbers are different from each other are not.
 
@@ -230,8 +253,11 @@ def unique_numbers(numbers):
 ```
 
 Baseline error: Test failed: assert test_distinct([1,5,7,9]) == True -> NameError: name 'test_distinct' is not defined
+
 --------------------------------------------------------------------------------
+
 --- Example 9 ---
+
 Task ID: 49
 Instruction: Write a function to extract every first or specified element from a given two-dimensional list.
 
@@ -258,8 +284,11 @@ def extract_first_or_specified(lst, index=0):
 ```
 
 Baseline error: Test failed: assert specified_element([[1, 2, 3, 2], [4, 5, 6, 2], [7, 1, 9, 5]],0)==[1, 4, 7] -> NameError: name 'specified_element' is not defined
+
 --------------------------------------------------------------------------------
---- Example 10 ---
+
+--- Example 10 --
+-
 Task ID: 56
 Instruction: Write a python function to check if a given number is one less than twice its reverse.
 
@@ -287,8 +316,11 @@ def is_half_reverse(num):
 ```
 
 Baseline error: Test failed: assert check(70) == False -> NameError: name 'check' is not defined
+
 --------------------------------------------------------------------------------
---- Example 11 ---
+
+--- Example 11 --
+-
 Task ID: 58
 Instruction: Write a python function to check whether the given two integers have opposite sign or not.
 
@@ -313,8 +345,11 @@ def have_opposite_signs(num1, num2):
 ```
 
 Baseline error: Test failed: assert opposite_Signs(1,-2) == True -> NameError: name 'opposite_Signs' is not defined
+
 --------------------------------------------------------------------------------
---- Example 12 ---
+
+--- Example 12 --
+-
 Task ID: 62
 Instruction: Write a python function to find smallest number in a list.
 
@@ -341,8 +376,11 @@ def find_smallest(numbers):
 ```
 
 Baseline error: Test failed: assert smallest_num([10, 20, 1, 45, 99]) == 1 -> NameError: name 'smallest_num' is not defined
+
 --------------------------------------------------------------------------------
---- Example 13 ---
+
+--- Example 13 --
+-
 Task ID: 64
 Instruction: Write a function to sort a list of tuples using lambda.
 
@@ -367,8 +405,11 @@ def sort_tuples_with_lambda(tuples_list):
 ```
 
 Baseline error: Test failed: assert subject_marks([('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)])==[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)] -> NameError: name 'subject_marks' is not defined
+
 --------------------------------------------------------------------------------
---- Example 14 ---
+
+--- Example 14 --
+-
 Task ID: 66
 Instruction: Write a python function to count positive numbers in a list.
 
@@ -393,8 +434,11 @@ def count_positives(numbers):
 ```
 
 Baseline error: Test failed: assert pos_count([1,-2,3,-4]) == 2 -> NameError: name 'pos_count' is not defined
+
 --------------------------------------------------------------------------------
---- Example 15 ---
+
+--- Example 15 --
+-
 Task ID: 68
 Instruction: Write a python function to check whether the given array is monotonic or not.
 
@@ -435,4 +479,5 @@ def is_monotonic(arr):
 ```
 
 Baseline error: Test failed: assert is_Monotonic([6, 5, 4, 4]) == True -> NameError: name 'is_Monotonic' is not defined
+
 --------------------------------------------------------------------------------

@@ -111,45 +111,6 @@ Outputs include:
 
 Security note: evaluation executes test strings with exec; use in trusted environments only.
 
-### Demo notebook
-Open notebooks/demo.ipynb. Optional env vars:
+### Results
+See [analysis.md](./analysis.ipynb) 
 
-PowerShell:
-```powershell
-$env:DEMO_BASE_MODEL = "mistralai/Mistral-7B-Instruct-v0.2"
-$env:DEMO_LORA_DIR  = "artifacts/checkpoints/mistral7b-code-r8"
-```
-
-Bash:
-```bash
-export DEMO_BASE_MODEL="mistralai/Mistral-7B-Instruct-v0.2"
-export DEMO_LORA_DIR="artifacts/checkpoints/mistral7b-code-r8"
-```
-
-### Optional: Merge LoRA
-```bash
-python - << 'PY'
-from peft import AutoPeftModelForCausalLM
-m = AutoPeftModelForCausalLM.from_pretrained(
-    "artifacts/checkpoints/mistral7b-code-r8", torch_dtype="auto"
-)
-m = m.merge_and_unload()
-m.save_pretrained("artifacts/merged/mistral7b-code-r8")
-PY
-```
-
-### Troubleshooting
-- bitsandbytes issues (Windows):
-  - Prefer WSL2 (Ubuntu 22.04). If staying on Windows native, use standard LoRA (no QLoRA) and shorter sequences.
-- CUDA OOM:
-  - Lower max_seq_len, keep micro-batch=1, increase grad_accum
-- Slow/failed downloads:
-  - Use HF cache (HF_HOME/TRANSFORMERS_CACHE)
-- Python/CUDA pairing:
-  - Python 3.13 preferred; install PyTorch CUDA build matching your driver (cu118 index shown; adjust if using a different CUDA runtime)
-
-### Repro tips
-```bash
-pip freeze > artifacts/metrics/requirements.txt
-```
-Configs/run args are saved in each checkpoint’s run_config.json.

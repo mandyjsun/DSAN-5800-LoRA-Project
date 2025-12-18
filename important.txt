@@ -1,0 +1,101 @@
+model-00002-of-00003.safetensors: 100% 5.00G/5.00G [00:39<00:00, 125MB/s]
+Fetching 3 files: 100% 3/3 [00:40<00:00, 13.51s/it]
+Loading checkpoint shards: 100% 3/3 [00:16<00:00,  5.40s/it]
+generation_config.json: 100% 111/111 [00:00<00:00, 906kB/s]
+Generating train split: 7166 examples [00:00, 844304.12 examples/s]
+Generating train split: 895 examples [00:00, 300528.55 examples/s]
+Applying formatting function to train dataset: 100% 7166/7166 [00:01<00:00, 5719.47 examples/s]
+Adding EOS to train dataset: 100% 7166/7166 [00:00<00:00, 20108.40 examples/s]
+Tokenizing train dataset: 100% 7166/7166 [00:02<00:00, 2599.66 examples/s]
+Truncating train dataset: 100% 7166/7166 [00:00<00:00, 529459.95 examples/s]
+Applying formatting function to eval dataset: 100% 895/895 [00:00<00:00, 7965.76 examples/s]
+Adding EOS to eval dataset: 100% 895/895 [00:00<00:00, 18653.49 examples/s]
+Tokenizing eval dataset: 100% 895/895 [00:00<00:00, 2434.88 examples/s]
+Truncating eval dataset: 100% 895/895 [00:00<00:00, 223592.95 examples/s]
+Starting training...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 2}.
+wandb: (1) Create a W&B account
+wandb: (2) Use an existing W&B account
+wandb: (3) Don't visualize my results
+wandb: Enter your choice: 3
+wandb: You chose "Don't visualize my results"
+wandb: Tracking run with wandb version 0.23.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /content/DSAN-5800-LoRA-Project/wandb/offline-run-20251217_014707-ct5esptb
+  0% 0/448 [00:00<?, ?it/s]/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py:1044: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. Starting in PyTorch 2.9, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+{'loss': 2.2198, 'grad_norm': 3.5748281478881836, 'learning_rate': 6.428571428571429e-05, 'entropy': 1.0927678001113237, 'num_tokens': 41332.0, 'mean_token_accuracy': 0.6417784783989191, 'epoch': 0.04}
+{'loss': 0.9988, 'grad_norm': 0.8008204698562622, 'learning_rate': 9.996725440441367e-05, 'entropy': 0.983121590083465, 'num_tokens': 79734.0, 'mean_token_accuracy': 0.7863655945286154, 'epoch': 0.09}
+{'loss': 0.7463, 'grad_norm': 0.9556258320808411, 'learning_rate': 9.97055469293108e-05, 'entropy': 0.6453077274374663, 'num_tokens': 120480.0, 'mean_token_accuracy': 0.8262148959562182, 'epoch': 0.13}
+{'loss': 0.7257, 'grad_norm': 1.3265414237976074, 'learning_rate': 9.918350269285229e-05, 'entropy': 0.6912354519590735, 'num_tokens': 157974.0, 'mean_token_accuracy': 0.8238183015957474, 'epoch': 0.18}
+{'loss': 0.6175, 'grad_norm': 0.9933809638023376, 'learning_rate': 9.840385594331022e-05, 'entropy': 0.7048052317462862, 'num_tokens': 197487.0, 'mean_token_accuracy': 0.839466048590839, 'epoch': 0.22}
+{'loss': 0.5821, 'grad_norm': 0.7796398401260376, 'learning_rate': 9.737069014263838e-05, 'entropy': 0.7076356057077646, 'num_tokens': 235457.0, 'mean_token_accuracy': 0.8346028036437929, 'epoch': 0.27}
+{'loss': 0.5255, 'grad_norm': 0.650324821472168, 'learning_rate': 9.608941657901496e-05, 'entropy': 0.5874618261586875, 'num_tokens': 276304.0, 'mean_token_accuracy': 0.8418838473036885, 'epoch': 0.31}
+{'loss': 0.5159, 'grad_norm': 0.6248419880867004, 'learning_rate': 9.456674602478974e-05, 'entropy': 0.582361254375428, 'num_tokens': 316335.0, 'mean_token_accuracy': 0.842177496291697, 'epoch': 0.36}
+{'loss': 0.5135, 'grad_norm': 0.6470075845718384, 'learning_rate': 9.281065358827939e-05, 'entropy': 0.587673710193485, 'num_tokens': 355026.0, 'mean_token_accuracy': 0.8402091337367892, 'epoch': 0.4}
+{'loss': 0.4865, 'grad_norm': 0.548205554485321, 'learning_rate': 9.08303369435023e-05, 'entropy': 0.5551705235615373, 'num_tokens': 394744.0, 'mean_token_accuracy': 0.8458947377279401, 'epoch': 0.45}
+{'loss': 0.5002, 'grad_norm': 0.5310623645782471, 'learning_rate': 8.863616815662832e-05, 'entropy': 0.5705121149308979, 'num_tokens': 433987.0, 'mean_token_accuracy': 0.845435688085854, 'epoch': 0.49}
+{'loss': 0.4779, 'grad_norm': 0.4847409129142761, 'learning_rate': 8.6239639361456e-05, 'entropy': 0.5361261183395982, 'num_tokens': 475625.0, 'mean_token_accuracy': 0.8496992234140635, 'epoch': 0.54}
+{'loss': 0.4974, 'grad_norm': 0.5346137881278992, 'learning_rate': 8.365330256844646e-05, 'entropy': 0.5618791386019438, 'num_tokens': 515228.0, 'mean_token_accuracy': 0.8447070265188813, 'epoch': 0.58}
+{'loss': 0.4946, 'grad_norm': 0.4946809709072113, 'learning_rate': 8.089070392256865e-05, 'entropy': 0.5403775457758456, 'num_tokens': 555709.0, 'mean_token_accuracy': 0.8473148539662361, 'epoch': 0.63}
+{'loss': 0.4935, 'grad_norm': 0.4191136360168457, 'learning_rate': 7.796631275428617e-05, 'entropy': 0.5609143764944747, 'num_tokens': 596540.0, 'mean_token_accuracy': 0.8463762767612935, 'epoch': 0.67}
+{'loss': 0.4921, 'grad_norm': 0.5436959266662598, 'learning_rate': 7.489544579528633e-05, 'entropy': 0.5489411248825491, 'num_tokens': 636767.0, 'mean_token_accuracy': 0.8462320413440466, 'epoch': 0.71}
+{'loss': 0.492, 'grad_norm': 0.7570659518241882, 'learning_rate': 7.169418695587791e-05, 'entropy': 0.5582176386378706, 'num_tokens': 679328.0, 'mean_token_accuracy': 0.8478334357962012, 'epoch': 0.76}
+{'loss': 0.4856, 'grad_norm': 0.4671171307563782, 'learning_rate': 6.837930308422977e-05, 'entropy': 0.5344910535961389, 'num_tokens': 719383.0, 'mean_token_accuracy': 0.8484708661213517, 'epoch': 0.8}
+{'loss': 0.494, 'grad_norm': 0.5027404427528381, 'learning_rate': 6.496815614866791e-05, 'entropy': 0.5606658638454973, 'num_tokens': 758159.0, 'mean_token_accuracy': 0.8478452742099762, 'epoch': 0.85}
+{'loss': 0.4858, 'grad_norm': 0.5531500577926636, 'learning_rate': 6.147861230298349e-05, 'entropy': 0.5444081323686987, 'num_tokens': 800342.0, 'mean_token_accuracy': 0.845741692557931, 'epoch': 0.89}
+{'loss': 0.498, 'grad_norm': 0.5389958024024963, 'learning_rate': 5.7928948311029175e-05, 'entropy': 0.5585873801261186, 'num_tokens': 839555.0, 'mean_token_accuracy': 0.840570405125618, 'epoch': 0.94}
+{'loss': 0.4976, 'grad_norm': 0.4822959005832672, 'learning_rate': 5.43377558207126e-05, 'entropy': 0.5599932356737554, 'num_tokens': 878928.0, 'mean_token_accuracy': 0.8445762611925602, 'epoch': 0.98}
+{'loss': 0.481, 'grad_norm': 0.4726799428462982, 'learning_rate': 5.0723843988759525e-05, 'entropy': 0.5499545343735683, 'num_tokens': 918297.0, 'mean_token_accuracy': 0.8514407681968977, 'epoch': 1.03}
+{'loss': 0.4559, 'grad_norm': 0.47196805477142334, 'learning_rate': 4.710614096625726e-05, 'entropy': 0.5136472564190626, 'num_tokens': 957701.0, 'mean_token_accuracy': 0.8542159201577306, 'epoch': 1.07}
+{'loss': 0.4468, 'grad_norm': 0.4976832866668701, 'learning_rate': 4.350359476095562e-05, 'entropy': 0.5184226308949291, 'num_tokens': 997000.0, 'mean_token_accuracy': 0.8574744889512658, 'epoch': 1.12}
+{'loss': 0.4457, 'grad_norm': 0.5017473101615906, 'learning_rate': 3.993507399556699e-05, 'entropy': 0.5102641665842385, 'num_tokens': 1036241.0, 'mean_token_accuracy': 0.8554929196834564, 'epoch': 1.16}
+{'loss': 0.4438, 'grad_norm': 0.4920071065425873, 'learning_rate': 3.641926908185193e-05, 'entropy': 0.5053880810271949, 'num_tokens': 1076980.0, 'mean_token_accuracy': 0.8582930875942111, 'epoch': 1.21}
+{'loss': 0.4417, 'grad_norm': 0.49277400970458984, 'learning_rate': 3.29745943280987e-05, 'entropy': 0.507323683006689, 'num_tokens': 1117610.0, 'mean_token_accuracy': 0.8600685557350516, 'epoch': 1.25}
+{'loss': 0.4501, 'grad_norm': 0.5276288390159607, 'learning_rate': 2.9619091492716895e-05, 'entropy': 0.5097947079688311, 'num_tokens': 1156405.0, 'mean_token_accuracy': 0.8557442516088486, 'epoch': 1.29}
+{'loss': 0.4614, 'grad_norm': 0.47123000025749207, 'learning_rate': 2.6370335289090654e-05, 'entropy': 0.5268672331003472, 'num_tokens': 1197775.0, 'mean_token_accuracy': 0.8514688333496452, 'epoch': 1.34}
+{'loss': 0.4239, 'grad_norm': 0.5164404511451721, 'learning_rate': 2.3245341336617325e-05, 'entropy': 0.5010381140280515, 'num_tokens': 1238892.0, 'mean_token_accuracy': 0.860604390501976, 'epoch': 1.38}
+{'loss': 0.4511, 'grad_norm': 0.5376915335655212, 'learning_rate': 2.026047704004548e-05, 'entropy': 0.5122176419012249, 'num_tokens': 1278597.0, 'mean_token_accuracy': 0.8587019888684153, 'epoch': 1.43}
+{'loss': 0.4382, 'grad_norm': 0.5797389149665833, 'learning_rate': 1.7431375863888898e-05, 'entropy': 0.5136108609382063, 'num_tokens': 1319316.0, 'mean_token_accuracy': 0.8565433142706752, 'epoch': 1.47}
+{'loss': 0.4493, 'grad_norm': 0.6202356219291687, 'learning_rate': 1.4772855450910745e-05, 'entropy': 0.5197431200183928, 'num_tokens': 1360860.0, 'mean_token_accuracy': 0.8549466243013739, 'epoch': 1.52}
+{'loss': 0.4504, 'grad_norm': 0.5131963491439819, 'learning_rate': 1.2298840013539436e-05, 'entropy': 0.5169209620915354, 'num_tokens': 1400136.0, 'mean_token_accuracy': 0.8552846172824502, 'epoch': 1.56}
+{'loss': 0.4498, 'grad_norm': 0.5506829023361206, 'learning_rate': 1.0022287404696774e-05, 'entropy': 0.5192089814227074, 'num_tokens': 1441363.0, 'mean_token_accuracy': 0.854896861501038, 'epoch': 1.61}
+{'loss': 0.4489, 'grad_norm': 0.58232182264328, 'learning_rate': 7.955121250011216e-06, 'entropy': 0.5085205720737577, 'num_tokens': 1481947.0, 'mean_token_accuracy': 0.8581768214702606, 'epoch': 1.65}
+{'loss': 0.4315, 'grad_norm': 0.5988668203353882, 'learning_rate': 6.10816849687878e-06, 'entropy': 0.4983489054720849, 'num_tokens': 1522100.0, 'mean_token_accuracy': 0.8592710938304663, 'epoch': 1.7}
+{'loss': 0.4492, 'grad_norm': 0.5825818777084351, 'learning_rate': 4.49110270746369e-06, 'entropy': 0.5150851480197162, 'num_tokens': 1561203.0, 'mean_token_accuracy': 0.8556582996621728, 'epoch': 1.74}
+{'loss': 0.4357, 'grad_norm': 0.5370305776596069, 'learning_rate': 3.112393392645985e-06, 'entropy': 0.5053041041828692, 'num_tokens': 1600974.0, 'mean_token_accuracy': 0.8606445716693998, 'epoch': 1.79}
+{'loss': 0.4527, 'grad_norm': 0.590017557144165, 'learning_rate': 1.979261652283587e-06, 'entropy': 0.5179346184246242, 'num_tokens': 1638159.0, 'mean_token_accuracy': 0.8548322267830372, 'epoch': 1.83}
+{'loss': 0.4357, 'grad_norm': 0.5937403440475464, 'learning_rate': 1.0976423541266935e-06, 'entropy': 0.4960224837530404, 'num_tokens': 1680619.0, 'mean_token_accuracy': 0.8600226383656263, 'epoch': 1.88}
+{'loss': 0.4506, 'grad_norm': 0.6614174842834473, 'learning_rate': 4.7215304947508257e-07, 'entropy': 0.5168138718698174, 'num_tokens': 1719388.0, 'mean_token_accuracy': 0.8533686017617583, 'epoch': 1.92}
+{'loss': 0.4286, 'grad_norm': 0.6297096014022827, 'learning_rate': 1.0606978838545445e-07, 'entropy': 0.49733432051725684, 'num_tokens': 1758331.0, 'mean_token_accuracy': 0.8596576465293765, 'epoch': 1.96}
+100% 448/448 [2:24:25<00:00, 19.04s/it]wandb: WARNING URL not available in offline run
+{'train_runtime': 8692.3577, 'train_samples_per_second': 1.649, 'train_steps_per_second': 0.052, 'train_loss': 0.5360464320651123, 'entropy': 0.5196129785865311, 'num_tokens': 1789556.0, 'mean_token_accuracy': 0.8539497070894466, 'epoch': 2.0}
+100% 448/448 [2:24:26<00:00, 19.34s/it]
+Saved adapter to artifacts/checkpoints/mistral7b-code-r32
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /content/DSAN-5800-LoRA-Project/wandb/offline-run-20251217_014707-ct5esptb
+wandb: Find logs at: wandb/offline-run-20251217_014707-ct5esptb/logs
+
+
+{
+  "total": 500,
+  "syntax_ok": 500,
+  "syntax_rate": 1.0,
+  "pass": 136,
+  "pass_rate": 0.272,
+  "model": "mistralai/Mistral-7B-Instruct-v0.2",
+  "lora_dir": "artifacts/checkpoints/mistral7b-code-r32"
+}
+Wrote 
+
+{
+  "total": 500,
+  "syntax_ok": 500,
+  "syntax_rate": 1.0,
+  "pass": 136,
+  "pass_rate": 0.272,
+  "model": "mistralai/Mistral-7B-Instruct-v0.2",
+  "lora_dir": "artifacts/checkpoints/mistral7b-code-r32"
+}
+Wrote 

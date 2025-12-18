@@ -100,7 +100,7 @@ Use standard LoRA (no QLoRA) if bitsandbytes fails on Windows native (remove use
 ```bash
 python scripts/eval_mbpp.py \
   --model mistralai/Mistral-7B-Instruct-v0.2 \
-  --lora-dir artifacts/checkpoints/mistral7b-code-r8 \
+  --lora-dir artifacts/checkpoints/mistral7b-code-r8\
   --mbpp-file data/processed/mbpp_test.jsonl \
   --out-file artifacts/metrics/mistral7b-code-r8-mbpp_results.json \
   --device-map auto \

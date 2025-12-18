@@ -7,8 +7,9 @@ __pycache__/
 
 # Data and artifacts
 data/*
-artifacts/*
+artifacts/checkpoints
 *.zip
+
 
 # OS
 .DS_Store
@@ -18,6 +19,6 @@ Thumbs.db
 .env
 .vscode/
 .idea/
-
+venv
 
 wandb/*

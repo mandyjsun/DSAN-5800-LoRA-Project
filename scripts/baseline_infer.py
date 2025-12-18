@@ -29,7 +29,7 @@ def write_jsonl(path: str, items: Iterable[Dict]) -> None:
 def build_prompt(tokenizer: AutoTokenizer, instruction: str, user_input: str = "") -> str:
     # Prefer model's chat template if available
     messages = [
-        {"role": "system", "content": "You are a Python coding assistant. Produce correct, clean, efficient Python."},
+        {"role": "system", "content": "You are a Python coding assistant. Write correct, clean, and efficient Python code. Output only valid Python code. Please incorporate comments in your code where appropriate."},
         {"role": "user", "content": instruction if not user_input else f"{instruction}\n\nInput: {user_input}"},
     ]
     try:
